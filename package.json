@@ -1,0 +1,31 @@
+{
+  "name": "js-ubersmithclient",
+  "version": "1.0.0",
+  "description": "A rewrite of python-ubersmithclient in everyone's favorite language",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --recursive ./test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/internap/js-ubersmithclient.git"
+  },
+  "author": "msmol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/internap/js-ubersmithclient/issues"
+  },
+  "homepage": "https://github.com/internap/js-ubersmithclient#readme",
+  "dependencies": {
+    "request": "^2.79.0",
+    "urlencode": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nock": "^9.0.6"
+  }
+}
