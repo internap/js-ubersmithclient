@@ -31,7 +31,7 @@ ubClient.client.list({client_id: 12345})  // returns a Promise
 - timeout: Request timeout length, in seconds (default: 60)
 - use_http_get: Whether to GET or POST to Ubersmith (default: false, i.e. use POST)
 
-# UB API method args
+## UB API method args
 
 They must be passed in an Object, e.g. `client.list({client_id: 12345, brand_id: 6789})`
 
