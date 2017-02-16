@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/internap/js-ubersmithclient.git"
+    "uri": "git+https://github.com/internap/js-ubersmithclient.git"
   },
   "author": "msmol",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/internap/js-ubersmithclient/issues"
+    "uri": "https://github.com/internap/js-ubersmithclient/issues"
   },
   "homepage": "https://github.com/internap/js-ubersmithclient#readme",
   "dependencies": {

@@ -1,5 +1,7 @@
 # js-ubersmithclient
 
+[![Build Status](https://travis-ci.org/internap/js-ubersmithclient.svg?branch=master)](https://travis-ci.org/internap/js-ubersmithclient)
+
 Rewrite of python-ubersmithclient in everyone's favorite language
 
 ## Usage

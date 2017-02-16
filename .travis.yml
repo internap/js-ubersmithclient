@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 6.0
+  - 7.0
+  - 7.5
+
+deploy:
+  provider: npm
+  email: opensource@internap.com
+  api_key:
+    secure: EApalWjv8fLOIetQGeL/kI7XrVPFt7r+xxE4q/X2c8MmYNH5piz1YHLR6S3xdGI0eLh0xCbIhmK3dPRn217uF4mpInVfcaTNKifP16ViMwtHlRWcwP79ry+JW6DiqdLgp0jKqHO/39shCoduDY4O9uXpcUErzDdYnJNp+PA6LcygzFbMk6yJC6OEqB8AGuDr5RC3uP3uW0A93k3uINzKcd/BNhlvRRbesPm42vsVpiYur8IFgPqaMm9e2Dh7d41rk3oITqL9us5QUyxL4Th/pAUsndSYZbXNWPtFQAAR9RHRirR4XJJ2OHtCEp0b7sASs71Fqz4uyCoBs/kx5hr+GHw9vbiW80cl9fc9B60zxtR5uHhikEaZBB4VCgBf8FUmEdtI0cGi5q/+VaJc6scMpF4hlAGBGN7MqFqdBtfb9q6Y0FVz4Z43vwOGSHJ6269h35Eq6gC6Z9Eq8sBZ2USovsIzi69VyQw8HusNQ8frw51qfJV3DbHiONaqwwDsfGeq/2gV5cR8REsguD7pmEkEP37pWaO6kk0S4jUGnIrHF/yqkEh76PCyF/S/58Q+4C3qb87ZpHamO0cNMt+ijm9kxqa9IUn2y44YPXlPUvHFzB3DJAF8A4VAqdHV6wYfMpulH9Xg3AkiR1NIYdLV463VpGr+BgKuvW7G98bvcBOm1QQ=
+  on:
+    tags: true
+    repo: internap/js-ubersmithclient
