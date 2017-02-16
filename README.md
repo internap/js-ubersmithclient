@@ -7,7 +7,7 @@ Rewrite of python-ubersmithclient in everyone's favorite language
 ## Usage
 
 ```javascript
-const UbersmithClient = require('UbersmithClient');
+const UbersmithClient = require('js-ubersmithclient');
 const ubClient = new UbersmithClient(url, user, password, timeout, use_http_get);
 
 ubClient.client.list({client_id: 12345})  // returns a Promise
