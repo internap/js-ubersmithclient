@@ -12,7 +12,7 @@ const config = {
     url: 'http://ub.com',
     user: 'root',
     password: 'test',
-    timeout: 10,
+    timeout: 10
 };
 
 describe('Ubersmith Client', () => {
@@ -21,10 +21,10 @@ describe('Ubersmith Client', () => {
 
         beforeEach(() => {
             this.client = new UbersmithClient(config.url,
-                                              config.user,
-                                              config.password,
-                                              config.timeout,
-                                              true);
+                config.user,
+                config.password,
+                config.timeout,
+                true);
         });
 
         afterEach(() => {
@@ -33,7 +33,7 @@ describe('Ubersmith Client', () => {
 
         it('should list a single client', done => {
             _mockHttpGet(config.url, '/api/2.0/?method=client.list&client_id=12345', 200, responses.filtered);
-            this.client.client.list({client_id:12345})
+            this.client.client.list({client_id: 12345})
                 .then(res => {
                     expect(res).to.deep.equal(responses.filtered.data);
                     done();
@@ -97,7 +97,7 @@ describe('Ubersmith Client', () => {
 
         });
 
-        function _mockHttpGet(baseUrl, endpoint, statusCode, responsePayload, headers={}) {
+        function _mockHttpGet(baseUrl, endpoint, statusCode, responsePayload, headers = {}) {
             nock(baseUrl)
                 .get(endpoint)
                 .basicAuth({
@@ -111,11 +111,13 @@ describe('Ubersmith Client', () => {
     describe('In POST mode', () => {
 
         beforeEach(() => {
-            this.client = new UbersmithClient(config.url,
-                                              config.user,
-                                              config.password,
-                                              config.timeout,
-                                              false);
+            this.client = new UbersmithClient(
+                config.url,
+                config.user,
+                config.password,
+                config.timeout,
+                false
+            );
         });
 
         afterEach(() => {
@@ -123,16 +125,15 @@ describe('Ubersmith Client', () => {
         });
 
         it('should list a single client', done => {
-            _mockHttpPost(config.url,
-                          '/api/2.0/',
-                          {
-                              method: 'client.list',
-                              client_id:12345
-                          },
-                          200,
-                          responses.filtered);
+            _mockHttpPost(
+                config.url,
+                '/api/2.0/',
+                'method=client.list&client_id=12345',
+                200,
+                responses.filtered
+            );
 
-            this.client.client.list({client_id:12345})
+            this.client.client.list({client_id: 12345})
                 .then(res => {
                     expect(res).to.deep.equal(responses.filtered.data);
                     done();
@@ -218,7 +219,7 @@ describe('Ubersmith Client', () => {
 
         });
 
-        function _mockHttpPost(baseUrl, endpoint, data, statusCode, responsePayload, headers={}) {
+        function _mockHttpPost(baseUrl, endpoint, data, statusCode, responsePayload, headers = {}) {
             nock(baseUrl)
                 .post(endpoint, data)
                 .basicAuth({
